@@ -1,170 +1,128 @@
 # Transmission_line_faultDetection_system
-Transmission Line Fault Detection with Fire Alarm and Protection System
-Overview
+# Transmission Line Fault Detection with Fire Alarm and Protection System
 
+## Overview
 This project presents a DC transmission line protection system that detects electrical faults and fire hazards in real time. The system continuously monitors transmission line conditions using sensors and automatically isolates faulty sections to prevent damage or accidents.
 
-The system is built using an Arduino microcontroller, current sensor, flame sensor, relay module, and LCD display. It detects abnormal conditions such as line-to-line faults, line-to-ground faults, and overheating/fire hazards, alerts the user, and disconnects the affected line.
+The system is built using an Arduino microcontroller, current sensor, flame sensor, relay module, and LCD display. It detects abnormal conditions such as line-to-line faults, line-to-ground faults, and overheating or fire hazards, alerts the user, and disconnects the affected line.
 
-A key feature of the project is the fault distance estimation, which helps identify where along the transmission line the fault occurred, allowing faster maintenance and improved safety.
+A key feature of the project is fault distance estimation, which helps identify where along the transmission line the fault occurred, allowing faster maintenance and improved safety.
 
-Features
+---
 
-Real-time monitoring of transmission line conditions
+## Features
+- Real-time monitoring of transmission line conditions
+- Detection of line-to-line faults
+- Detection of line-to-ground faults
+- Fire and overheating detection
+- Automatic relay-based protection
+- Fault distance estimation
+- Visual and audible alerts
+- LCD display for system status
 
-Detection of line-to-line faults
+---
 
-Detection of line-to-ground faults
+## Hardware Components
+- Arduino UNO / Arduino Nano
+- ACS712 Current Sensor
+- Flame Sensor
+- Relay Module
+- 16×2 LCD Display with I2C Module
+- Buzzer
+- LED Indicators
+- Resistors
+- Transmission line model (copper wires and towers)
 
-Fire and overheating detection
+---
 
-Automatic relay-based protection
+## Technologies Used
+- Arduino IDE
+- Embedded C / Arduino Programming
+- Sensor interfacing
+- Microcontroller-based automation
+- Electrical fault detection logic
 
-Fault distance estimation
+---
 
-Visual and audible alerts
+## System Working
+1. The system continuously reads current and flame sensor values.
+2. The Arduino compares these readings with predefined threshold values.
+3. If abnormal conditions are detected:
+   - The type of fault is identified.
+   - The fault distance is estimated.
+4. The relay trips to disconnect the faulty section.
+5. The LCD displays the fault information.
+6. LED indicators and buzzer notify the user.
 
-LCD display for system status
+---
 
-Hardware Components
+## Fault Conditions Detected
 
-Arduino UNO / Arduino Nano
-
-ACS712 Current Sensor
-
-Flame Sensor
-
-Relay Module
-
-16×2 LCD Display with I²C Module
-
-Buzzer
-
-LED Indicators
-
-Resistors
-
-Transmission line model (copper wires and towers)
-
-Technologies Used
-
-Arduino IDE
-
-Embedded C / Arduino Programming
-
-Sensor interfacing
-
-Electrical fault detection logic
-
-Microcontroller-based automation
-
-System Working
-
-The system continuously reads current, temperature, and flame sensor values.
-
-The Arduino compares these readings with predefined threshold values.
-
-If abnormal conditions are detected:
-
-The system identifies the type of fault.
-
-The fault distance is estimated.
-
-The relay trips to disconnect the faulty section.
-
-The LCD displays fault information.
-
-LED and buzzer alerts notify the user.
-
-Fault Conditions Detected
-Line-to-Line Fault
-
+### Line-to-Line Fault
 Occurs when abnormal current flows between two conductors.
 
-Line-to-Ground Fault
-
+### Line-to-Ground Fault
 Occurs when a conductor directly connects to ground.
 
-Overheating / Fire Fault
+### Fire / Overheating Fault
+Detected using a flame sensor when fire or abnormal heat is detected near the transmission line.
 
-Detected using temperature and flame sensors when the temperature crosses a safe limit or flame is detected.
+---
 
-Transmission Line Model
-
+## Transmission Line Model
 The prototype uses a scaled-down transmission line model:
 
-Four copper wires act as conductors.
+- Four copper wires act as conductors.
+- Three wires represent the R, Y, and B phases.
+- One wire represents neutral or ground.
+- Miniature towers built using ice-cream sticks simulate real transmission towers.
 
-Three wires represent phase conductors (R, Y, B).
+This setup allows fault injection at different points and demonstrates current behavior during faults.
 
-One wire represents neutral/ground return.
+---
 
-Miniature transmission towers built from ice-cream sticks simulate real transmission towers.
+## Project Workflow
+Start System
+↓
+Initialize Sensors and LCD
+↓
+Read Current and Flame Sensor Values
+↓
+Compare Readings with Threshold
+↓
+If Normal → Continue Monitoring
+↓
+If Fault Detected
+↓
+Identify Fault Type
+↓
+Estimate Fault Distance
+↓
+Trip Relay and Display Alert
 
-This setup allows:
+---
 
-Fault injection at different points
+## Applications
+- Power system protection studies
+- Educational demonstration of transmission line faults
+- Smart monitoring systems
+- Electrical safety systems
 
-Demonstration of current behavior during faults
+---
 
-Practical understanding of power system protection
+## Future Improvements
+- IoT-based remote monitoring
+- GSM alerts for fault notification
+- Mobile application interface
+- Improved fault distance calculation
+- Integration with smart grid systems
 
-Block Diagram Workflow
+---
 
-Start system
-
-Initialize sensors and LCD
-
-Read current and temperature values
-
-Compare readings with thresholds
-
-If normal → continue monitoring
-
-If fault detected →
-
-Identify fault type
-
-Estimate fault distance
-
-Trip relay
-
-Display alert on LCD
-
-Activate buzzer and LED
-
-Applications
-
-Power system protection studies
-
-Educational demonstration of transmission line faults
-
-Smart monitoring systems
-
-Electrical safety systems
-
-Future Improvements
-
-IoT-based remote monitoring
-
-GSM alerts for fault notification
-
-Mobile app interface
-
-More accurate fault distance calculation
-
-Integration with smart grid systems
-
-Team Members
-
-Saurabh Mishra
-
-Pratiksha Kaushal
-
-Isha Bhadauria
-
-Krishna
-
-Manish Pradhan
-
-Mohit Meena
+## Team Members
+- Saurabh Mishra  
+- Pratiksha Kaushal  
+- Isha Bhadauria  
+- Krishna  
+- Manish Pradhan  
+- Mohit Meena

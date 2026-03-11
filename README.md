@@ -81,27 +81,6 @@ This setup allows fault injection at different points and demonstrates current b
 
 ---
 
-## Project Workflow
-Start System
-↓
-Initialize Sensors and LCD
-↓
-Read Current and Flame Sensor Values
-↓
-Compare Readings with Threshold
-↓
-If Normal → Continue Monitoring
-↓
-If Fault Detected
-↓
-Identify Fault Type
-↓
-Estimate Fault Distance
-↓
-Trip Relay and Display Alert
-
----
-
 ## Applications
 - Power system protection studies
 - Educational demonstration of transmission line faults
